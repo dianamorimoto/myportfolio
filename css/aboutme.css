@@ -1,4 +1,4 @@
-/* GENERAL STYLEING */
+/* GENERAL STYLING */
 
 body {
     font-family: Georgia, 'Times New Roman', Times, serif; 
@@ -37,7 +37,7 @@ body {
 }
 
 .nav-links a{
-    color: black;
+    color: #800080;
     text-decoration: none;      /* gets rid of the line link */
     font-weight: 500;
     transition: color 0.3s ease;
@@ -54,57 +54,6 @@ body {
     font-size: 1.5rem;
     cursor: pointer;
     color: #333;
-}
-
-/* ------------------------------------------------------------------ */
-/* ABOUT PAGE */
-
-.about-header {
-    text-align: center;
-    margin-bottom: 1rem;
-}
-
-.about-header h1{
-    font-size: 2.5rem;
-    color: purple;
-    margin-bottom: 1rem;
-}
-
-.about-container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 3rem 2rem;
-    display: grid; 
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    align-items: start;
-}
-
-.pfp {
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.bio h2{
-    margin-bottom: 1.5rem;
-    color: black;
-}
-
-.bio p{
-    margin-bottom: 1.5rem;
-    line-height: 1.6;
-    color: #555;
-
-}
-
-/* ------------------------------------------------------------------ */
-/* FOOTER */
-footer{
-    text-align: center; 
-    background: purple;
-    padding: 1rem;
-    color: white;
 }
 
 /* ------------------------------------------------------------------ */
@@ -135,4 +84,139 @@ footer{
     .about-content {
         grid-template-columns: 1fr;
     }
+}
+
+/* ------------------------------------------------------------------ */
+/* ABOUT PAGE */
+
+.about-header {
+    text-align: center;
+    margin-bottom: 1rem;
+    margin-top: 5rem;
+}
+
+.about-header h1{
+    font-size: 2.5rem;
+    color: rgb(128, 0, 128);
+    margin-bottom: 1rem;
+}
+
+.about-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: grid; 
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.pfp {
+    position: relative; 
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden; /* overlay doesn't spill outside image */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+
+}
+
+.pfp:hover img{
+    transform: scale(1.05);
+}
+
+.pfp-overlay{                  /* Overlay effect on hover */
+    position: absolute;                     /* Positions overlay relative to grid-item */
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+    color: white;                         /* text white */
+    display: flex;                          /* Makes the overlay a flex container */
+    align-items: center;                    /* Centers text vertically */
+    justify-content: center;                /* Centers text horizontally */
+    text-align: center;                     /* Centers text */
+    opacity: 0;                             /* Initially invisible */
+    transition: opacity 0.3s ease;          /* Smooth fade-in effect */
+}
+
+.pfp:hover .pfp-overlay{    /* Show overlay on hover */
+    opacity: 1;
+}
+
+
+.bio h2{
+    margin-bottom: 1.5rem;
+    color: black;
+}
+
+.bio p{
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    color: #555;
+
+}
+
+/* ------------------------------------------------------------------ */
+/* RESUME */
+
+.resume-btn {
+    display: inline-block;
+    background: purple;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s ease;
+    margin-top: 1rem;
+}
+
+.resume-btn:hover{
+    background: lightblue;
+}
+
+/* ------------------------------------------------------------------ */
+/* INSTAGRAM */
+
+.instagram-btn {
+    display: inline-block;
+    background: purple;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s ease;
+    margin-top: 1rem;
+}
+
+.instagram-btn:hover{
+    background: lightblue;
+}
+
+/* ------------------------------------------------------------------ */
+/* LINKEDIN */
+
+.linkedin-btn {
+    display: inline-block;
+    background: purple;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s ease;
+    margin-top: 1rem;
+}
+
+.linkedin-btn:hover{
+    background: lightblue;
+}
+
+/* ------------------------------------------------------------------ */
+/* FOOTER */
+footer{
+    text-align: center; 
+    background: purple;
+    padding: 0.5rem;
+    color: white;
 }
