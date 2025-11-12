@@ -75,6 +75,60 @@
         grid-template-columns: 1fr;
     }
 }
+/* --------------------------------------------------------------------- */
+/* TITLE BOX */ 
+/* BOX & SHADOW FOR HEADING 1 */
+header {
+    max-width: 900px;                           /*makes all boxes 900px - so they're not full screen size*/
+    margin: 0 auto;                             /*centers boxes, keeps everything from shifting to left */
+    margin-top: 2rem;                           /*space above the white box*/
+    padding: 2rem;                              /*smth to do with the entire white edge of the boxes - don't touch!*/     
+    background-color: white;        
+    border-radius: 20px;                        /*rounding the corners*/
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;                        /*background space btwn this box and objective box*/
+    text-align: center;                         /*centers text*/
+}
+
+/* HEADING 1 - "DIANA MORIMOTO" */
+header h1{
+    font-size: 2.5em;
+    color: #6525a1;
+    margin-bottom: 5px;
+}
+
+/* CONTACT INFO (email, phone, linkedin) */
+.contact-info{
+    align-items: center;
+    line-height: 2;
+    gap: 1rem;
+    font-weight: bold;
+}
+
+/* LINKS FOR EMAIL & PHONE */
+.contact-link{
+    align-items: center;        /*centers items*/
+    text-decoration: none;      /*gets rid of the underline*/
+    margin: 0 10px
+}
+
+/* EMAIL COLOR */
+.contact-link[href^="mailto"] {
+    color: #8800ff;
+}
+
+/* LINKEDIN COLOR */
+.contact-link[href^="linkedin"] {
+    color: #4400ff;
+}
+
+/* ICONS FOR EMAIL & PHONE */
+.contact-icon{
+    vertical-align: middle;
+    margin-right: 4px;
+    width: 20px;
+    height: 20px;
+}
 
 /* ------------------------------------------------------------------ */
 /* FOOTER */
