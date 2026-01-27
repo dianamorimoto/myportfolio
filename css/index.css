@@ -86,6 +86,34 @@ body {
     }
 }
 
+
+
+/* --------------------------------------------------------------------- */
+/* OTHER BOXES */
+/* CREATES BOXES W SHADOW */
+section {
+    max-width: 900px;                                   /*makes all boxes 900px - so they're not full screen size*/
+    margin: 0 auto;                                     /*centers boxes, keeps everything from shifting to left */
+    background-color: #ffffff;
+    border-radius: 20px;                              /*rounds the corners*/ 
+    padding: 10px;                                    /*space around text in box - green area*/
+    padding-left: 30px;                               /*space left of text in box - green area*/
+    padding-right: 30px;                              /*space right of text in box - green area*/
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);       /*don't rlly need bc there's a background, but keep*/
+    margin-bottom: 20px;
+    transition: transform 0.3s ease; 
+    backdrop-filter: blur(5px);
+}
+
+/* BOX TRANSITIONS WHEN MOUSE HOVERS */
+section {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+section:hover {
+    transform: translateY(-5px);
+}
+
+/* ------------------------------------------------------------------ */
 /* ------------------------------------------------------------------ */
 /* FOOTER */
 footer{
