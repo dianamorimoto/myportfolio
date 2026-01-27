@@ -4,7 +4,7 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif; 
     margin: 0;
     padding: 0;
-    background-color: white;
+    background-color: rgb(221, 222, 250);
     color: black;
 }
 
@@ -208,6 +208,23 @@ body {
 }
 
 .linkedin-btn:hover{
+    background: lightblue;
+}
+/* ------------------------------------------------------------------ */
+/* EMAIL BUTTON */
+
+.email-btn {
+    display: inline-block;
+    background: purple;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s ease;
+    margin-top: 1rem;
+}
+
+.email-btn:hover{
     background: lightblue;
 }
 
