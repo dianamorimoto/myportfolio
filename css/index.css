@@ -4,7 +4,7 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif; 
     margin: 0;
     padding: 0;
-    background-color: rgb(221, 222, 250);
+    background-color: rgb(241, 241, 255);
     color: black;
 }
 
@@ -89,8 +89,25 @@ body {
 
 
 /* --------------------------------------------------------------------- */
+/* HEADER */
+
+.about-header {
+    text-align: center;
+    margin-bottom: 1rem;
+    margin-top: 3rem;
+}
+
+.about-header h1{
+    font-size: 2.5rem;
+    color: rgb(128, 0, 128);
+    margin-bottom: 1rem;
+}
+
+/* --------------------------------------------------------------------- */
+
 /* OTHER BOXES */
 /* CREATES BOXES W SHADOW */
+
 section {
     max-width: 900px;                                   /*makes all boxes 900px - so they're not full screen size*/
     margin: 0 auto;                                     /*centers boxes, keeps everything from shifting to left */
@@ -114,6 +131,47 @@ section:hover {
 }
 
 /* ------------------------------------------------------------------ */
+/* RAINBOWS, FRUIT, MILK */
+
+.rainbows-art{
+    position: relative;
+    align-items: center; 
+    justify-content: center; 
+    overflow: hidden;
+}
+
+.rainbows-art img{
+    width: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.rainbows-art-overlay{                      /* Overlay effect on hover */
+    position: absolute;                     /* Positions overlay relative to grid-item */
+    top: 0;
+    left: 0;
+    width: 100%;                            /* Do not remove this is for the text's shadow*/
+    height: 100%;                           /* Do not remove this is for the text's shadow*/
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+    color: white;                         /* text white */
+    display: flex;                          /* Makes the overlay a flex container */
+    align-items: center;                    /* Centers text vertically */
+    justify-content: center;                /* Centers text horizontally */
+    text-align: center;                     /* Centers text */
+    opacity: 0;                             /* Initially invisible */
+    transition: opacity 0.3s ease;  
+}
+
+.rainbows-art:hover .rainbows-art-overlay{ /* Show overlay on hover */
+    opacity: 1;
+}
+
+.rainbows-text{
+    text-align: left;
+    align-items: center;
+    border-radius: 15px;
+}
+
 /* ------------------------------------------------------------------ */
 /* FOOTER */
 footer{

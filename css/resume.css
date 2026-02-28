@@ -4,7 +4,7 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif; 
     margin: 0;
     padding: 0;
-    background-color: rgb(221, 222, 250);
+    background-color: rgb(241, 241, 255);
     color: black;
 }
 
@@ -104,7 +104,7 @@ header {
 
 /* HEADING 1 - "DIANA MORIMOTO" */
 header h1{
-    font-size: 2.5em;
+    font-size: 2em;
     color: #6525a1;
     margin-bottom: 5px;
 }
