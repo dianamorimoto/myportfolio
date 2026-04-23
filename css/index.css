@@ -131,6 +131,114 @@ section:hover {
 }
 
 /* ------------------------------------------------------------------ */
+
+.tuszine-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* space between the two images */
+    margin-bottom: 20px;
+}
+
+.tuszine-art {
+    position: relative;
+    flex: 1;                     /* makes both images equal width */
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.tuszine-art img {
+    width: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.tuszine-art-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.tuszine-art:hover .tuszine-art-overlay {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .tuszine-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+/* ------------------------------------------------------------------ */
+/* SLIDESHOW OF CAMPAIGN */
+
+.campaign-slideshow {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+}
+
+.campaign-slide {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.campaign-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 20px;
+}
+
+/* Fade animation */
+.fade {
+    animation: fadeEffect 0.5s ease-in-out;
+}
+
+@keyframes fadeEffect {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Next/Prev buttons */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.prev:hover, .next:hover {
+    background: rgba(0,0,0,0.8);
+}
+
+/*--------------------------------------------------------*/
 /* RAINBOWS, FRUIT, MILK */
 
 .rainbows-art{
